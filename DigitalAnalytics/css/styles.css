@@ -1,0 +1,337 @@
+:root{
+    --fuentePrincipal: 'Roboto', sans-serif;
+    --azul: #0067a7;
+    --blanco: #fff;
+    --negro: #000;
+    --grisOsc: #414756;
+    --grisCla: #a5abbd;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: var(--fuentePrincipal);
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+img{
+    max-width: 100%;
+}
+h1,h2,h3{
+    margin: 0;
+    line-height: 1.2;
+}
+p{
+    font-size: 1.8rem;
+    font-weight: 100;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-size: 3.4rem;
+}
+h2{
+    font-size: 2.4rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.header{
+    background-color: var(--grisOsc);
+    color: var(--grisCla);
+}
+.logo{
+    text-align: center;
+}
+.logo a img{
+    height: 6rem;
+    padding: 1rem 1rem .5rem 1rem;
+}
+
+.logo h1, .navbar a{
+    color: var(--grisCla);
+}
+
+@media (min-width: 768px) {
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.navbar a{
+    display: block;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .effects::after{
+        content: ' ';
+        display: block;
+        width: 0;
+        height: .2rem;
+        background: gray;
+        transition: width .3s;
+        margin-top: 1rem;
+    }
+    
+    .effects:hover::after{
+        width: 100%;
+        transition: width .3s;
+    }
+}
+.navbar{
+    text-align: center;
+    padding: 1rem 1.5rem 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .navbar{
+        display: flex;
+        gap: 1rem;
+    }
+    .header-contenedor{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.home{
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../img/home.webp);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: var(--blanco);
+    text-align: center;
+}
+.home h1{
+    font-size: 8rem;
+}
+.home h2{
+    font-size: 3rem;
+    padding-top: 2rem;
+}
+.home-contenido{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-contenido h1{
+    border-bottom: 1rem solid var(--grisOsc);
+}
+@media (min-width: 768px) {
+    .description{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 4rem;
+    }
+}
+.description{
+    padding: 8rem 2rem 2rem 2rem;
+    text-align: center;
+}
+.description h2, .start__info h2{
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+.objetivos{
+    text-align: center;
+}
+.titular{
+    font-size: 4rem;
+    padding: 4rem 0;
+    background-color: var(--grisOsc);
+    color: var(--grisCla);
+    text-align: center;
+}
+.objetivos-card{
+    padding: 2rem;
+}
+@media (min-width: 768px) {
+    .objetivos-grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .start{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 4rem;
+    }
+}
+.start{
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+.button{
+    background-color: var(--grisCla);
+    padding: .5rem 8rem;
+    border: .1rem solid var(--grisOsc);
+    border-radius: 1rem;
+    color: var(--blanco);
+    font-size: 1.6rem;
+}
+.footer {
+background-color: #414756;
+padding: 2rem 8rem;
+text-align: center;
+}
+.footer-social img{
+border: .1rem solid rgba(255,255,255,.3);
+border-radius: 50%;
+padding: 1.5rem;
+margin: 1rem;
+}
+.footer-links{
+padding-top: 2rem;
+display: flex;
+justify-content: center;
+gap: 2rem;
+flex-wrap: wrap;
+}
+.footer-links a{
+border: .1rem solid rgba(255,255,255,.3);
+padding: .5rem 2.5rem;
+margin: 1rem 0;
+font-size: 1.8rem;
+color: var(--grisCla);
+}
+.footer-links a:hover, .footer-social img:hover{
+background-color: #505f7e;
+cursor: pointer;
+}
+.footer-content p{
+padding-top: 2rem;
+margin: 0;
+}
+.footer-content span{
+color: var(--blanco);
+}
+
+.home2{
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../img/home.webp);
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: var(--blanco);
+    text-align: center;
+}
+.home2 h1{
+    font-size: 8rem;
+}
+.home2 h2{
+    font-size: 3rem;
+    padding-top: 2rem;
+}
+.home2-contenido{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home2-contenido h1{
+    border-bottom: 1rem solid var(--grisOsc);
+}
+@media (min-width: 768px) {
+    .games{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 4rem;
+    }
+}
+.games-card{
+    padding: 1rem;
+    text-align: center;
+}
+.games-card h1{
+    padding: 1rem .5rem 2rem .5rem;
+}
+@media (min-width: 768px) {
+    .blog{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 3rem;
+    }
+}
+.blog{
+    padding: 5rem;
+    text-align: center;
+}
+.blog__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.blog img{
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .news__card{
+        display: flex;
+        padding: 2rem;
+        gap: 3rem;
+    }
+}
+.news__card{
+    text-align: center;
+    padding: 4rem;
+}
+@media (min-width: 768px) {
+    .about-model, .valorant__model, .csgo__model, .dota2__model, .fort__model{
+        display: flex;
+        gap: 3rem;
+    }
+}
+.about-model, .valorant__model, .csgo__model, .dota2__model, .fort__model{
+    text-align: center;
+    padding: 2rem;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .collabs__content{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+}
+.collabs__content{
+    text-align: center;
+}
+.collabs__card{
+    padding: 2rem;
+}
+.collabs__card h2{
+    padding-top: 2rem;
+}
+.gform{
+    text-align: center;
+}
+.lista{
+    text-align: center;
+    padding: 2rem;
+}
+ul{
+    display: inline-block;
+    text-align: left;
+    line-height: 3rem;
+}
+li{
+    font-size: 1.6rem;
+}
